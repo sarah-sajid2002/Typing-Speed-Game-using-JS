@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="shortcut icon"
+      href="./67974626-cartoon-person-typing-on-keyboard-vector-illustration-removebg-preview.png"
+      type="image/x-icon"
+    />
+    <title>typing speed game | js games</title>
+  </head>
+  <body>
+    <div class="gameBoard">
+      <div class="gameUpdates">
+        <h4 id="timeLeft">
+          <div class="slider"></div>
+        </h4>
+
+        <h4 id="score">score</h4>
+      </div>
+      <h2 id="heading">TYPING SPEED GAME</h2>
+      <div class="word"></div>
+      <div class="input">
+        <input type="text" placeholder="type word" class="answer" />
+      </div>
+    </div>
+    <div class="gameOver">
+      <h1>game over</h1>
+      <h3>your score: <span id="result"></span></h3>
+      <button id="restart">restart</button>
+    </div>
+
+    <script src="./speed.js"></script>
+  </body>
+</html>

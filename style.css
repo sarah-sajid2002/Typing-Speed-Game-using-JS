@@ -1,0 +1,174 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: aqua;
+  text-align: center;
+}
+.gameBoard {
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  transform: translate(50%, 50%);
+  background-color: rgb(209, 191, 26);
+  border-radius: 25px;
+  text-align: center;
+}
+.gameOver {
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  transform: translate(50%, 50%);
+  background-color: rgba(233, 187, 36, 0.848);
+  border-radius: 25px;
+  text-align: center;
+  display: none;
+}
+.gameUpdates {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 50px;
+  background-color: rgb(222, 222, 143);
+}
+.word {
+  width: 90%;
+  margin: auto;
+  background-color: aqua;
+  height: 60px;
+  margin: 20px auto;
+  border-radius: 10px;
+  font-size: 30px;
+  font-weight: bolder;
+}
+.input .answer {
+  width: 90%;
+  margin: auto;
+  height: 60px;
+  margin: 20px auto;
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 10px;
+}
+button {
+  width: 150px;
+  height: 40px;
+  background-color: aqua;
+  border: 2 px solid white;
+  font-size: 18px;
+}
+.check {
+  background-color: orangered;
+}
+#timeLeft {
+  width: 150px;
+  height: 15px;
+  background-color: none;
+  border-radius: 10px;
+  border: 2px solid aqua;
+}
+#heading {
+  color: red(227, 71, 71);
+}
+#restart {
+  position: absolute;
+  top: 40%;
+  left: 40%;
+}
+.slider {
+  height: 11px;
+  border-radius: 10px;
+  position: relative;
+  left: 0px;
+  right: 0px;
+  margin: 0px 0px;
+}
+.sliderAni {
+  animation: sliderAni 5s linear 1 normal forwards;
+}
+@keyframes sliderAni {
+  0% {
+    width: 145px;
+    background-color: aqua;
+  }
+  50% {
+    width: 72px;
+    background-color: orangered;
+  }
+  100% {
+    width: 5px;
+    background-color: red;
+  }
+}
+
+@media (max-width: 950px) {
+  .gameBoard,
+  .gameOver {
+    width: 70%;
+    height: 50%;
+    margin: 100px 100px;
+    transform: translate(0%, 0%);
+  }
+  #heading {
+    font-size: 20px;
+  }
+  #restart {
+    position: absolute;
+    top: 30%;
+    left: 30%;
+  }
+}
+@media (max-width: 550px) {
+  .gameBoard,
+  .gameOver {
+    width: 70%;
+    height: 40%;
+    margin: 100px 60px;
+    transform: translate(0%, 0%);
+  }
+  #restart {
+    position: absolute;
+    top: 30%;
+    left: 20%;
+  }
+  .word {
+    margin: 10px auto;
+  }
+}
+@media (max-width: 350px) {
+  .gameUpdates {
+    justify-content: space-evenly;
+  }
+  .gameBoard,
+  .gameOver {
+    width: 80%;
+    height: 40%;
+    margin: 100px 30px;
+    transform: translate(0%, 0%);
+  }
+  .word {
+    font-size: 18px;
+    padding: 10px;
+    margin: 10px auto;
+  }
+  #timeLeft {
+    width: 100px;
+    height: 15px;
+  }
+  @keyframes sliderAni {
+    0% {
+      width: 90px;
+      background-color: aqua;
+    }
+    50% {
+      width: 45px;
+      background-color: orangered;
+    }
+    100% {
+      width: 5px;
+      background-color: red;
+    }
+  }
+}
